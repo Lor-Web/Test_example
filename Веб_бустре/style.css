@@ -1,0 +1,173 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.shadow-active {
+    height: 100%;    
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    opacity: 80%;
+    background-color: black;
+    z-index: 99;
+}
+
+.content {
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-right: 50px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    margin-bottom: 20px;
+    width: 150px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.card-name {
+    margin-bottom: 10px;
+}
+    .card-name:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.price {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.popUp-btn, .card-button {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background-color: #db2165;
+    border-radius: 30px;
+    transition: 0.2s;
+
+}
+
+.popUp {
+    display: none;
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2;
+    border-radius: 30px;
+    background-color: #e8e8e8;
+    z-index: 100;
+    -webkit-box-shadow: 0px 6px 23px 9px rgba(34, 60, 80, 0.31);
+    -moz-box-shadow: 0px 6px 23px 9px rgba(34, 60, 80, 0.31);
+    box-shadow: 0px 6px 23px 9px rgba(34, 60, 80, 0.31);
+}
+
+.popUp-active {
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.popUp-form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popUp-div {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popUp-title {
+    margin-right: 15px;
+}
+
+.popup-input {
+    height: 30px;
+    border-radius: 20px;
+}
+
+
+
+.popUp-btn:link, .card-button:link,
+.popUp-btn:visited, .card-button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.popUp-btn:hover, .card-button:hover {
+    transition: 0.2s;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popUp-btn:active, .card-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popUp-btn, .card-button {
+    background-color:#db2165;
+    color: #fff;
+}
+
+.popUp-btn:hover::after, .card-button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.popUp-btn, .card-button {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
